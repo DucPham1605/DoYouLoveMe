@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoveMe</title>
+    <style>
+        h1{
+            position: absolute;
+            top:100px;
+            left:220px;
+        }
+       #yes{
+           position: absolute;
+           top: 235px;
+           left: 285px;
+       }
+        #no{
+            position: absolute;
+            top: 235px;
+            left: 360px;
+        }
+    </style>
+</head>
+<body>
+<h1><p>Do you love me?</p></h1>
+<button type="button" id="yes" onclick="clickYes();">YES</button>
+<button type="button" id="no" onmouseover="clickNo()">NO</button>
+
+<script>
+    function clickYes(){
+        alert('<3');
+    }
+
+    function clickNo(){
+        var x = Math.random() * (window.innerHeight - 2);
+        var y = Math.random() * (window.innerWidth -50);
+        document.getElementById("no").style.top = x + 'px';
+        document.getElementById("no").style.left = y + 'px';
+    }
+</script>
+</body>
+</html>
